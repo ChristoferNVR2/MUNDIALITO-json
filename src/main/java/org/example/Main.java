@@ -1,13 +1,14 @@
 package org.example;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import java.io.InputStream;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
         ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.registerModule(new JavaTimeModule());
 
         try (InputStream inputStream = Main.class.getResourceAsStream("/teams.json")) {
             TeamsData teamsData = objectMapper.readValue(inputStream, TeamsData.class);
@@ -23,6 +24,7 @@ public class Main {
                 }
             }
         } catch (Exception e) {
+            //noinspection CallToPrintStackTrace
             e.printStackTrace();
         }
     }

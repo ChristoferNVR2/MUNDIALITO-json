@@ -1,8 +1,10 @@
 package org.example;
 
+import java.time.LocalDate;
+
 public class Player2 {
     private String name;
-    private String birthDate;
+    private LocalDate birthDate;
     private String birthPlace;
     private String position;
     private int number;
@@ -12,7 +14,7 @@ public class Player2 {
 
     }
 
-    public Player2(String name, String birthDate, String birthPlace, String position, int number, boolean isTitular) {
+    public Player2(String name, LocalDate birthDate, String birthPlace, String position, int number, boolean isTitular) {
         this.name = name;
         this.birthDate = birthDate;
         this.birthPlace = birthPlace;
@@ -33,7 +35,7 @@ public class Player2 {
         return name;
     }
 
-    public String getBirthDate() {
+    public LocalDate getBirthDate() {
         return birthDate;
     }
 
@@ -65,7 +67,7 @@ public class Player2 {
         this.position = position;
     }
 
-    public void setBirthDate(String birthDate) {
+    public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
     }
 
