@@ -1,0 +1,64 @@
+{
+  "teams": [
+    {
+      "name": "France",
+      "country": {
+        "name": "France",
+        "code": "FRA"
+      },
+      "players": [
+        { "name": "Hugo Lloris", "birthDate": "1986-12-26", "birthPlace": "Nice", "position": "Goalkeeper", "number": 1, "isTitular": true },
+        { "name": "Benjamin Pavard", "birthDate": "1996-03-28", "birthPlace": "Maubeuge", "position": "Defender", "number": 2, "isTitular": true },
+        { "name": "Raphael Varane", "birthDate": "1993-04-25", "birthPlace": "Lille", "position": "Defender", "number": 4, "isTitular": true },
+        { "name": "Samuel Umtiti", "birthDate": "1993-11-14", "birthPlace": "Yaounde", "position": "Defender", "number": 5, "isTitular": true },
+        { "name": "Lucas Hernandez", "birthDate": "1996-02-14", "birthPlace": "Marseille", "position": "Defender", "number": 21, "isTitular": true },
+        { "name": "N'Golo Kante", "birthDate": "1991-03-29", "birthPlace": "Paris", "position": "Midfielder", "number": 13, "isTitular": true },
+        { "name": "Paul Pogba", "birthDate": "1993-03-15", "birthPlace": "Lagny-sur-Marne", "position": "Midfielder", "number": 6, "isTitular": true },
+        { "name": "Kylian Mbappe", "birthDate": "1998-12-20", "birthPlace": "Bondy", "position": "Forward", "number": 10, "isTitular": true },
+        { "name": "Antoine Griezmann", "birthDate": "1991-03-21", "birthPlace": "Macon", "position": "Forward", "number": 7, "isTitular": true },
+        { "name": "Olivier Giroud", "birthDate": "1986-09-30", "birthPlace": "Chambery", "position": "Forward", "number": 9, "isTitular": true },
+        { "name": "Blaise Matuidi", "birthDate": "1987-04-09", "birthPlace": "Toulouse", "position": "Midfielder", "number": 14, "isTitular": true },
+        { "name": "Steve Mandanda", "birthDate": "1985-03-28", "birthPlace": "Kinshasa", "position": "Goalkeeper", "number": 16, "isTitular": false },
+        { "name": "Alphonse Areola", "birthDate": "1993-02-27", "birthPlace": "Paris", "position": "Goalkeeper", "number": 23, "isTitular": false },
+        { "name": "Presnel Kimpembe", "birthDate": "1995-08-13", "birthPlace": "Beaumont-sur-Oise", "position": "Defender", "number": 3, "isTitular": false },
+        { "name": "Adil Rami", "birthDate": "1985-12-27", "birthPlace": "Bastia", "position": "Defender", "number": 17, "isTitular": false },
+        { "name": "Djibril Sidibe", "birthDate": "1992-07-29", "birthPlace": "Troyes", "position": "Defender", "number": 19, "isTitular": false },
+        { "name": "Thomas Lemar", "birthDate": "1995-11-12", "birthPlace": "Baie-Mahault", "position": "Midfielder", "number": 8, "isTitular": false },
+        { "name": "Steven Nzonzi", "birthDate": "1988-12-15", "birthPlace": "Colombes", "position": "Midfielder", "number": 15, "isTitular": false },
+        { "name": "Florian Thauvin", "birthDate": "1993-01-26", "birthPlace": "Orleans", "position": "Forward", "number": 20, "isTitular": false },
+        { "name": "Ousmane Dembele", "birthDate": "1997-05-15", "birthPlace": "Vernon", "position": "Forward", "number": 11, "isTitular": false }
+      ],
+      "technicalStaff": []
+    },
+    {
+      "name": "Belgium",
+      "country": {
+        "name": "Belgium",
+        "code": "BEL"
+      },
+      "players": [
+        { "name": "Thibaut Courtois", "birthDate": "1992-05-11", "birthPlace": "Bree", "position": "Goalkeeper", "number": 1, "isTitular": true },
+        { "name": "Toby Alderweireld", "birthDate": "1989-03-02", "birthPlace": "Antwerp", "position": "Defender", "number": 2, "isTitular": true },
+        { "name": "Vincent Kompany", "birthDate": "1986-04-10", "birthPlace": "Uccle", "position": "Defender", "number": 4, "isTitular": true },
+        { "name": "Jan Vertonghen", "birthDate": "1987-04-24", "birthPlace": "Sint-Niklaas", "position": "Defender", "number": 5, "isTitular": true },
+        { "name": "Thomas Meunier", "birthDate": "1991-09-12", "birthPlace": "Sainte-Ode", "position": "Defender", "number": 15, "isTitular": true },
+        { "name": "Axel Witsel", "birthDate": "1989-01-12", "birthPlace": "Liege", "position": "Midfielder", "number": 6, "isTitular": true },
+        { "name": "Kevin De Bruyne", "birthDate": "1991-06-28", "birthPlace": "Drongen", "position": "Midfielder", "number": 7, "isTitular": true },
+        { "name": "Eden Hazard", "birthDate": "1991-01-07", "birthPlace": "La Louviere", "position": "Forward", "number": 10, "isTitular": true },
+        { "name": "Romelu Lukaku", "birthDate": "1993-05-13", "birthPlace": "Antwerp", "position": "Forward", "number": 9, "isTitular": true },
+        { "name": "Dries Mertens", "birthDate": "1987-05-06", "birthPlace": "Leuven", "position": "Forward", "number": 14, "isTitular": true },
+        { "name": "Marouane Fellaini", "birthDate": "1987-11-22", "birthPlace": "Etterbeek", "position": "Midfielder", "number": 8, "isTitular": true },
+        { "name": "Simon Mignolet", "birthDate": "1988-03-06", "birthPlace": "Sint-Truiden", "position": "Goalkeeper", "number": 12, "isTitular": false },
+        { "name": "Koen Casteels", "birthDate": "1992-06-25", "birthPlace": "Bonheiden", "position": "Goalkeeper", "number": 13, "isTitular": false },
+        { "name": "Dedryck Boyata", "birthDate": "1990-11-28", "birthPlace": "Brussels", "position": "Defender", "number": 20, "isTitular": false },
+        { "name": "Thomas Vermaelen", "birthDate": "1985-11-14", "birthPlace": "Kapellen", "position": "Defender", "number": 3, "isTitular": false },
+        { "name": "Yannick Carrasco", "birthDate": "1993-09-04", "birthPlace": "Vilvoorde", "position": "Midfielder", "number": 11, "isTitular": false },
+        { "name": "Mousa Dembele", "birthDate": "1987-07-16", "birthPlace": "Wilrijk", "position": "Midfielder", "number": 19, "isTitular": false },
+        { "name": "Thorgan Hazard", "birthDate": "1993-03-29", "birthPlace": "La Louviere", "position": "Midfielder", "number": 16, "isTitular": false },
+        { "name": "Michy Batshuayi", "birthDate": "1993-10-02", "birthPlace": "Brussels", "position": "Forward", "number": 21, "isTitular": false },
+        { "name": "Adnan Januzaj", "birthDate": "1995-02-05", "birthPlace": "Brussels", "position": "Forward", "number": 18, "isTitular": false }
+      ],
+      "technicalStaff": []
+    }
+  ]
+}
