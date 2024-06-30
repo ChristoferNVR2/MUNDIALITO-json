@@ -11,8 +11,8 @@ public class Main {
         objectMapper.registerModule(new JavaTimeModule());
 
         try (InputStream inputStream = Main.class.getResourceAsStream("/teams.json")) {
-            TeamsData teamsData = objectMapper.readValue(inputStream, TeamsData.class);
-            List<Team> teamList = teamsData.getTeams();
+            TeamsData teams = objectMapper.readValue(inputStream, TeamsData.class);
+            List<Team> teamList = teams.getTeams();
 
             for (Team teamData : teamList) {
                 Team team = getTeam(teamData);
@@ -40,6 +40,7 @@ public class Main {
                     playerData.getBirthPlace(),
                     playerData.getPosition(),
                     playerData.getNumber(),
+                    playerData.getTeam(),
                     playerData.isTitular()
             );
             team.addPlayer(player);

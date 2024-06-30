@@ -1,6 +1,7 @@
 package org.example;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 public class Player2 {
     private String name;
@@ -8,28 +9,30 @@ public class Player2 {
     private String birthPlace;
     private String position;
     private int number;
+    private Team team;
     private boolean isTitular;
 
     public Player2() {
 
     }
 
-    public Player2(String name, LocalDate birthDate, String birthPlace, String position, int number, boolean isTitular) {
+    public Player2(String name, LocalDate birthDate, String birthPlace, String position, int number, Team team, boolean isTitular) {
         this.name = name;
         this.birthDate = birthDate;
         this.birthPlace = birthPlace;
         this.position = position;
         this.number = number;
+        this.team = team;
         this.isTitular = isTitular;
     }
 
     public String getInfo() {
-        return name + ", Position: " + position + ", Number: " + number + ", Is Titular: " + (isTitular ? "Yes" : "No");
+        return name + ", Age: "+ calculateAge() + ", Position: " + position + ", Number: " + number + ", Is Titular: " + (isTitular ? "Yes" : "No");
     }
 
-//    public int calculateAge() {
-//        return Period.between(birthDate, LocalDate.now()).getYears();
-//    }
+    public int calculateAge() {
+        return Period.between(birthDate, LocalDate.now()).getYears();
+    }
 
     public String getName() {
         return name;
@@ -49,6 +52,10 @@ public class Player2 {
 
     public int getNumber() {
         return number;
+    }
+
+    public Team getTeam() {
+        return team;
     }
 
     public boolean isTitular() {
@@ -77,5 +84,9 @@ public class Player2 {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setTeam(Team team) {
+        this.team = team;
     }
 }
