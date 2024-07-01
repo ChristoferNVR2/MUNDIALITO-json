@@ -1,0 +1,224 @@
+{
+  "referees": [
+    {
+      "name": "Nestor Pitana",
+      "birthDate": "1975-06-17",
+      "birthPlace": "Argentina",
+      "federation": "CONMEBOL",
+      "role": "Main Referee",
+      "country": {
+        "name": "Argentina",
+        "code": "ARG"
+      }
+    },
+    {
+      "name": "Felix Brych",
+      "birthDate": "1975-08-03",
+      "birthPlace": "Germany",
+      "federation": "UEFA",
+      "role": "Main Referee",
+      "country": {
+        "name": "Germany",
+        "code": "GER"
+      }
+    },
+    {
+      "name": "Mark Geiger",
+      "birthDate": "1974-08-25",
+      "birthPlace": "United States",
+      "federation": "CONCACAF",
+      "role": "Main Referee",
+      "country": {
+        "name": "United States",
+        "code": "USA"
+      }
+    },
+    {
+      "name": "Cuneyt Cakir",
+      "birthDate": "1976-11-23",
+      "birthPlace": "Turkey",
+      "federation": "UEFA",
+      "role": "Main Referee",
+      "country": {
+        "name": "Turkey",
+        "code": "TUR"
+      }
+    },
+    {
+      "name": "Alireza Faghani",
+      "birthDate": "1978-03-21",
+      "birthPlace": "Iran",
+      "federation": "AFC",
+      "role": "Main Referee",
+      "country": {
+        "name": "Iran",
+        "code": "IRN"
+      }
+    },
+    {
+      "name": "Bjorn Kuipers",
+      "birthDate": "1973-03-28",
+      "birthPlace": "Netherlands",
+      "federation": "UEFA",
+      "role": "Main Referee",
+      "country": {
+        "name": "Netherlands",
+        "code": "NED"
+      }
+    },
+    {
+      "name": "Damir Skomina",
+      "birthDate": "1976-08-05",
+      "birthPlace": "Slovenia",
+      "federation": "UEFA",
+      "role": "Main Referee",
+      "country": {
+        "name": "Slovenia",
+        "code": "SVN"
+      }
+    },
+    {
+      "name": "Matthew Conger",
+      "birthDate": "1978-10-11",
+      "birthPlace": "New Zealand",
+      "federation": "OFC",
+      "role": "Main Referee",
+      "country": {
+        "name": "New Zealand",
+        "code": "NZL"
+      }
+    },
+    {
+      "name": "Ravshan Irmatov",
+      "birthDate": "1977-08-09",
+      "birthPlace": "Uzbekistan",
+      "federation": "AFC",
+      "role": "Main Referee",
+      "country": {
+        "name": "Uzbekistan",
+        "code": "UZB"
+      }
+    },
+    {
+      "name": "Joel Aguilar",
+      "birthDate": "1975-07-02",
+      "birthPlace": "El Salvador",
+      "federation": "CONCACAF",
+      "role": "Main Referee",
+      "country": {
+        "name": "El Salvador",
+        "code": "SLV"
+      }
+    },
+    {
+      "name": "Roberto Diaz",
+      "birthDate": "1981-01-15",
+      "birthPlace": "Mexico",
+      "federation": "CONCACAF",
+      "role": "Linesman",
+      "country": {
+        "name": "Mexico",
+        "code": "MEX"
+      }
+    },
+    {
+      "name": "Toru Sagara",
+      "birthDate": "1980-09-20",
+      "birthPlace": "Japan",
+      "federation": "AFC",
+      "role": "Linesman",
+      "country": {
+        "name": "Japan",
+        "code": "JPN"
+      }
+    },
+    {
+      "name": "Pawel Sokolnicki",
+      "birthDate": "1982-01-29",
+      "birthPlace": "Poland",
+      "federation": "UEFA",
+      "role": "Linesman",
+      "country": {
+        "name": "Poland",
+        "code": "POL"
+      }
+    },
+    {
+      "name": "Simon Bennett",
+      "birthDate": "1977-05-25",
+      "birthPlace": "England",
+      "federation": "UEFA",
+      "role": "Linesman",
+      "country": {
+        "name": "England",
+        "code": "ENG"
+      }
+    },
+    {
+      "name": "Mohammed Al Abakry",
+      "birthDate": "1979-12-12",
+      "birthPlace": "Saudi Arabia",
+      "federation": "AFC",
+      "role": "Linesman",
+      "country": {
+        "name": "Saudi Arabia",
+        "code": "KSA"
+      }
+    },
+    {
+      "name": "Juan Carlos Mora",
+      "birthDate": "1983-06-03",
+      "birthPlace": "Costa Rica",
+      "federation": "CONCACAF",
+      "role": "Linesman",
+      "country": {
+        "name": "Costa Rica",
+        "code": "CRC"
+      }
+    },
+    {
+      "name": "Sander van Roekel",
+      "birthDate": "1982-03-09",
+      "birthPlace": "Netherlands",
+      "federation": "UEFA",
+      "role": "Linesman",
+      "country": {
+        "name": "Netherlands",
+        "code": "NED"
+      }
+    },
+    {
+      "name": "Juan Pablo Belatti",
+      "birthDate": "1979-09-15",
+      "birthPlace": "Argentina",
+      "federation": "CONMEBOL",
+      "role": "Linesman",
+      "country": {
+        "name": "Argentina",
+        "code": "ARG"
+      }
+    },
+    {
+      "name": "Marvin Torrentera",
+      "birthDate": "1981-11-11",
+      "birthPlace": "Mexico",
+      "federation": "CONCACAF",
+      "role": "Linesman",
+      "country": {
+        "name": "Mexico",
+        "code": "MEX"
+      }
+    },
+    {
+      "name": "Gerson Lopez",
+      "birthDate": "1980-07-07",
+      "birthPlace": "Guatemala",
+      "federation": "CONCACAF",
+      "role": "Linesman",
+      "country": {
+        "name": "Guatemala",
+        "code": "GUA"
+      }
+    }
+  ]
+}

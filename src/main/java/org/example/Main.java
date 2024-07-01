@@ -14,9 +14,19 @@ public class Main {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
 
-        try (InputStream inputStream = Main.class.getResourceAsStream("/teams.json")) {
-            TeamsData teams = objectMapper.readValue(inputStream, TeamsData.class);
+        try (
+            InputStream teamInputStream = Main.class.getResourceAsStream("/teams.json");
+            InputStream stadiumInputStream = Main.class.getResourceAsStream("/stadiums.json");
+            InputStream refereeInputStream = Main.class.getResourceAsStream("/referees.json")
+        ) {
+            TeamsData teams = objectMapper.readValue(teamInputStream, TeamsData.class);
             List<Team> teamList = teams.getTeams();
+
+            StadiumsData stadiumsData = objectMapper.readValue(stadiumInputStream, StadiumsData.class);
+            List<Stadium> stadiumList = stadiumsData.getStadiums();
+
+            RefereesData refereesData = objectMapper.readValue(refereeInputStream, RefereesData.class);
+            List<Referee2> refereeList = refereesData.getReferees();
 
             Scanner scanner = new Scanner(System.in);
 
@@ -24,56 +34,67 @@ public class Main {
             for (int i = 0; i < teamList.size(); i++) {
                 System.out.println((i + 1) + ": " + teamList.get(i).getName());
             }
+
             int team1Index = scanner.nextInt() - 1;
             Team team1 = teamList.get(team1Index);
 
-            System.out.println("Select Team 2:");
-            for (int i = 0; i < teamList.size(); i++) {
-                System.out.println((i + 1) + ": " + teamList.get(i).getName());
+            int team2Index;
+            Team team2;
+
+            while (true) {
+                System.out.println("Select Team 2:");
+                for (int i = 0; i < teamList.size(); i++) {
+                    if (i == team1Index) {
+                        continue;
+                    }
+                    System.out.println((i + 1) + ": " + teamList.get(i).getName());
+                }
+                team2Index = scanner.nextInt() - 1;
+                if (team2Index != team1Index) {
+                    team2 = teamList.get(team2Index);
+                    break;
+                } else {
+                    System.out.println("Team 2 cannot be the same as Team 1. Try again.");
+                }
             }
-            int team2Index = scanner.nextInt() - 1;
-            Team team2 = teamList.get(team2Index);
 
             System.out.println("Enter Match Stage:");
             scanner.nextLine();  // Consume newline
             String stage = scanner.nextLine();
 
-            System.out.println("Enter Stadium Name:");
-            String stadiumName = scanner.nextLine();
-            System.out.println("Enter Stadium Location:");
-            String stadiumLocation = scanner.nextLine();
-            System.out.println("Enter Stadium Capacity:");
-            int stadiumCapacity = scanner.nextInt();
-            System.out.println("Does the Stadium have a roof? (true/false):");
-            boolean hasRoof = scanner.nextBoolean();
-            Stadium stadium = new Stadium(stadiumName, stadiumLocation, stadiumCapacity, hasRoof);
+            System.out.println("Select Stadium:");
+            for (int i = 0; i < stadiumList.size(); i++) {
+                System.out.println((i + 1) + ": " + stadiumList.get(i).getName() + " in " + stadiumList.get(i).getLocation());
+            }
+            int stadiumIndex = scanner.nextInt() - 1;
+            Stadium stadium = stadiumList.get(stadiumIndex);
 
             System.out.println("Enter Match Date (YYYY-MM-DD):");
             scanner.nextLine();  // Consume newline
             String date = scanner.nextLine();
 
-            System.out.println("Enter Number of Referees:");
-            int numReferees = scanner.nextInt();
-            scanner.nextLine();  // Consume newline
+//            System.out.println("Select 3 Referees:");
+//            List<Referee2> matchReferees = new ArrayList<>();
+//            for (int i = 0; i < 3; i++) {
+//                System.out.println("Select Referee " + (i + 1) + ":");
+//                for (int j = 0; j < refereeList.size(); j++) {
+//                    System.out.println((j + 1) + ": " + refereeList.get(j).getInfo());
+//                }
+//                int refereeIndex = scanner.nextInt() - 1;
+//                matchReferees.add(refereeList.get(refereeIndex));
+//            }
 
-            List<Referee> referees = new ArrayList<>();
-            for (int i = 0; i < numReferees; i++) {
-                System.out.println("Enter Referee " + (i + 1) + " Name:");
-                String refName = scanner.nextLine();
-                System.out.println("Enter Referee " + (i + 1) + " Birth Date (YYYY-MM-DD):");
-                LocalDate refBirthDate = LocalDate.parse(scanner.nextLine());
-                System.out.println("Enter Referee " + (i + 1) + " Birth Place:");
-                String refBirthPlace = scanner.nextLine();
-                System.out.println("Enter Referee " + (i + 1) + " Federation:");
-                String refFederation = scanner.nextLine();
-                System.out.println("Enter Referee " + (i + 1) + " Role:");
-                String refRole = scanner.nextLine();
-                System.out.println("Enter Referee " + (i + 1) + " Country:");
-                Country refCountry = new Country(scanner.nextLine(), scanner.nextLine());
-                referees.add(new Referee(refName, refBirthDate, refBirthPlace, refFederation, refRole, refCountry));
+            Referee2 mainReferee = selectMainReferee(refereeList, scanner);
+
+            List<Referee2> selectedLinesmen = new ArrayList<>();
+            selectedLinesmen.add(mainReferee); // Ensure main referee is not selected again
+
+            for (int i = 0; i < 2; i++) {
+                Referee2 linesman = selectLinesman(refereeList, selectedLinesmen, scanner);
+                selectedLinesmen.add(linesman);
             }
 
-            Match match = new Match(team1, team2, referees, stage, stadium, date);
+            Match match = new Match(team1, team2, selectedLinesmen, stage, stadium, date);
 
             boolean running = true;
             while (running) {
@@ -140,6 +161,43 @@ public class Main {
             }
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    private static Referee2 selectMainReferee(List<Referee2> refereeList, Scanner scanner) {
+        while (true) {
+            System.out.println("Select Main Referee:");
+            List<Referee2> refereeList2 = refereeList.subList(0, 10);
+            for (int i = 0; i < refereeList2.size(); i++) {
+                System.out.println((i + 1) + ": " + refereeList2.get(i).getInfo());
+            }
+            int refereeIndex = scanner.nextInt() - 1;
+            if (refereeIndex >= 0 && refereeIndex < refereeList.size()) {
+                Referee2 selectedReferee = refereeList.get(refereeIndex);
+                refereeList.remove(refereeIndex); // Remove selected referee from list to prevent re-selection
+                return selectedReferee;
+            } else {
+                System.out.println("Invalid selection. Please enter a valid number.");
+            }
+        }
+    }
+
+    private static Referee2 selectLinesman(List<Referee2> refereeList, List<Referee2> selectedLinesmen, Scanner scanner) {
+        while (true) {
+            System.out.println("Select Linesman:");
+            for (int i = 0; i < refereeList.size(); i++) {
+                if (!selectedLinesmen.contains(refereeList.get(i))) {
+                    System.out.println((i + 1) + ": " + refereeList.get(i).getInfo());
+                }
+            }
+            int refereeIndex = scanner.nextInt() - 1;
+            if (refereeIndex >= 0 && refereeIndex < refereeList.size() && !selectedLinesmen.contains(refereeList.get(refereeIndex))) {
+                Referee2 selectedLinesman = refereeList.get(refereeIndex);
+                selectedLinesmen.add(selectedLinesman); // Add selected linesman to selectedLinesmen list
+                return selectedLinesman;
+            } else {
+                System.out.println("Referee already selected or invalid selection. Please enter a valid number.");
+            }
         }
     }
 

@@ -6,6 +6,9 @@ public class Stadium {
     private int capacity;
     private boolean hasRoof;
 
+    public Stadium() {
+    }
+
     public Stadium(String name, String location, int capacity, boolean hasRoof) {
         this.name = name;
         this.location = location;
@@ -34,7 +37,7 @@ public class Stadium {
         return capacity;
     }
 
-    public boolean isHasRoof() {
+    public boolean getHasRoof() {
         return hasRoof;
     }
 }

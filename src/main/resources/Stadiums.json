@@ -1,0 +1,76 @@
+{
+  "stadiums": [
+    {
+      "name": "Luzhniki Stadium",
+      "location": "Moscow",
+      "capacity": 81000,
+      "hasRoof": true
+    },
+    {
+      "name": "Otkritie Arena",
+      "location": "Moscow",
+      "capacity": 45360,
+      "hasRoof": true
+    },
+    {
+      "name": "Saint Petersburg Stadium",
+      "location": "Saint Petersburg",
+      "capacity": 68134,
+      "hasRoof": true
+    },
+    {
+      "name": "Fisht Olympic Stadium",
+      "location": "Sochi",
+      "capacity": 47659,
+      "hasRoof": true
+    },
+    {
+      "name": "Kazan Arena",
+      "location": "Kazan",
+      "capacity": 45105,
+      "hasRoof": true
+    },
+    {
+      "name": "Nizhny Novgorod Stadium",
+      "location": "Nizhny Novgorod",
+      "capacity": 45000,
+      "hasRoof": true
+    },
+    {
+      "name": "Samara Arena",
+      "location": "Samara",
+      "capacity": 44918,
+      "hasRoof": true
+    },
+    {
+      "name": "Volgograd Arena",
+      "location": "Volgograd",
+      "capacity": 45568,
+      "hasRoof": true
+    },
+    {
+      "name": "Mordovia Arena",
+      "location": "Saransk",
+      "capacity": 44442,
+      "hasRoof": true
+    },
+    {
+      "name": "Rostov Arena",
+      "location": "Rostov-on-Don",
+      "capacity": 45000,
+      "hasRoof": true
+    },
+    {
+      "name": "Kaliningrad Stadium",
+      "location": "Kaliningrad",
+      "capacity": 35212,
+      "hasRoof": true
+    },
+    {
+      "name": "Ekaterinburg Arena",
+      "location": "Yekaterinburg",
+      "capacity": 35000,
+      "hasRoof": true
+    }
+  ]
+}

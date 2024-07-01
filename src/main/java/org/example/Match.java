@@ -6,7 +6,7 @@ import java.util.List;
 public class Match {
     private Team team1;
     private Team team2;
-    private List<Referee> referees;
+    private List<Referee2> referees;
     private List<Goal> goals;
     private List<Card> cards;
     private int attendance;
@@ -14,7 +14,7 @@ public class Match {
     private Stadium stadium;
     private String date;
 
-    public Match(Team team1, Team team2, List<Referee> referees, String stage, Stadium stadium, String date) {
+    public Match(Team team1, Team team2, List<Referee2> referees, String stage, Stadium stadium, String date) {
         this.team1 = team1;
         this.team2 = team2;
         this.referees = referees;
@@ -82,7 +82,7 @@ public class Match {
         return team2;
     }
 
-    public List<Referee> getReferees() {
+    public List<Referee2> getReferees() {
         return referees;
     }
 
