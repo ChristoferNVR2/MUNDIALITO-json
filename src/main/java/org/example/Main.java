@@ -111,20 +111,22 @@ public class Main {
 
                 switch (choice) {
                     case 1:
-                        System.out.println("Titular Players - " + team1.getName() + ":");
-                        displayTitularPlayers(team1.getPlayers());
-
-                        System.out.println();
-
-                        System.out.println("Titular Players - " + team2.getName() + ":");
-                        displayTitularPlayers(team2.getPlayers());
-
                         System.out.println("Enter Minute of Goal:");
                         int goalMinute = scanner.nextInt();
-                        scanner.nextLine();  // Consume newline
+                        scanner.nextLine();
+
+                        System.out.println("Titular Players - " + team1.getName() + ":");
+                        displayTitularPlayers(team1.getPlayers());
+                        System.out.println();
+                        System.out.println("Titular Players - " + team2.getName() + ":");
+                        displayTitularPlayers(team2.getPlayers());
+                        System.out.println();
+
                         System.out.println("Enter Player Name:");
                         String goalPlayerName = scanner.nextLine();
+
                         Player2 goalPlayer = findPlayerByName(team1, team2, goalPlayerName);
+
                         if (goalPlayer != null) {
                             match.addGoal(goalMinute, goalPlayer);
                             System.out.println("Goal added.");
@@ -135,10 +137,20 @@ public class Main {
                     case 2:
                         System.out.println("Enter Minute of Card:");
                         int cardMinute = scanner.nextInt();
-                        scanner.nextLine();  // Consume newline
+                        scanner.nextLine();
+
+                        System.out.println("Titular Players - " + team1.getName() + ":");
+                        displayTitularPlayers(team1.getPlayers());
+                        System.out.println();
+                        System.out.println("Titular Players - " + team2.getName() + ":");
+                        displayTitularPlayers(team2.getPlayers());
+                        System.out.println();
+
                         System.out.println("Enter Player Name:");
                         String cardPlayerName = scanner.nextLine();
+
                         Player2 cardPlayer = findPlayerByName(team1, team2, cardPlayerName);
+
                         if (cardPlayer != null) {
                             System.out.println("Enter Card Type (Yellow/Red):");
                             String cardType = scanner.nextLine();
