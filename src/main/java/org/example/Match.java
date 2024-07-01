@@ -64,9 +64,9 @@ public class Match {
         int team2Goals = 0;
 
         for (Goal goal : goals) {
-            if (goal.getPlayer().getTeam().equals(team1)) {
+            if (goal.getPlayer().getTeam() == team1) {
                 team1Goals++;
-            } else if (goal.getPlayer().getTeam().equals(team2)) {
+            } else if (goal.getPlayer().getTeam() == team2) {
                 team2Goals++;
             }
         }
@@ -100,6 +100,10 @@ public class Match {
 
     public String getDate() {
         return date;
+    }
+
+    public int getAttendance() {
+        return attendance;
     }
 }
 

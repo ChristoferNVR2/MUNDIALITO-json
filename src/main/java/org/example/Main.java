@@ -96,15 +96,20 @@ public class Main {
 
             Match match = new Match(team1, team2, selectedLinesmen, stage, stadium, date);
 
+            System.out.println("Enter Attendance:");
+            System.out.println("Stadium Capacity: " + stadium.getCapacity());
+            int attendance = scanner.nextInt();
+            match.setAttendance(attendance);
+            System.out.println("Attendance set to " + match.getAttendance());
+
             boolean running = true;
             while (running) {
                 System.out.println("\nMatch Menu:");
                 System.out.println("1. Add Goal");
                 System.out.println("2. Add Card");
-                System.out.println("3. Set Attendance");
-                System.out.println("4. Get Match Summary");
-                System.out.println("5. Get Match Result");
-                System.out.println("6. Exit");
+                System.out.println("3. Get Match Summary");
+                System.out.println("4. Get Match Result");
+                System.out.println("5. Exit");
 
                 int choice = scanner.nextInt();
                 scanner.nextLine();  // Consume newline
@@ -161,18 +166,12 @@ public class Main {
                         }
                         break;
                     case 3:
-                        System.out.println("Enter Attendance:");
-                        int attendance = scanner.nextInt();
-                        match.setAttendance(attendance);
-                        System.out.println("Attendance set.");
-                        break;
-                    case 4:
                         System.out.println(match.getSummary());
                         break;
-                    case 5:
+                    case 4:
                         System.out.println(match.getResult());
                         break;
-                    case 6:
+                    case 5:
                         running = false;
                         break;
                     default:
