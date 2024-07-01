@@ -3,9 +3,9 @@ package org.example;
 public abstract class Event {
     private Match match;
     private int minute;
-    private Player player;
+    private Player2 player;
 
-    public Event(Match match, int minute, Player player) {
+    public Event(Match match, int minute, Player2 player) {
         this.match = match;
         this.minute = minute;
         this.player = player;
@@ -22,7 +22,7 @@ public abstract class Event {
         return minute;
     }
 
-    public Player getPlayer() {
+    public Player2 getPlayer() {
         return player;
     }
 }

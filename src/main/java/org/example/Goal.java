@@ -2,7 +2,7 @@ package org.example;
 
 public class Goal extends Event {
 
-    public Goal(Match match, int minute, Player player) {
+    public Goal(Match match, int minute, Player2 player) {
         super(match, minute, player);
     }
 

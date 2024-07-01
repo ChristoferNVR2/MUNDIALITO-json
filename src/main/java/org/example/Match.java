@@ -26,12 +26,12 @@ public class Match {
         this.date = date;
     }
 
-    public void addGoal(int minute, Player player) {
+    public void addGoal(int minute, Player2 player) {
         Goal goal = new Goal(this, minute, player);
         goals.add(goal);
     }
 
-    public void addCard(int minute, Player player, String cardType) {
+    public void addCard(int minute, Player2 player, String cardType) {
         Card card = new Card(this, minute, player, cardType);
         cards.add(card);
     }
