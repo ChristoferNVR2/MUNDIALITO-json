@@ -22,6 +22,7 @@ public class Main {
                 for (Player2 player : team.getPlayers()) {
                     System.out.println(player.getInfo());
                 }
+                System.out.println();
             }
         } catch (Exception e) {
             //noinspection CallToPrintStackTrace
