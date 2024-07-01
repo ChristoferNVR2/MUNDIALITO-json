@@ -111,6 +111,14 @@ public class Main {
 
                 switch (choice) {
                     case 1:
+                        System.out.println("Titular Players - " + team1.getName() + ":");
+                        displayTitularPlayers(team1.getPlayers());
+
+                        System.out.println();
+
+                        System.out.println("Titular Players - " + team2.getName() + ":");
+                        displayTitularPlayers(team2.getPlayers());
+
                         System.out.println("Enter Minute of Goal:");
                         int goalMinute = scanner.nextInt();
                         scanner.nextLine();  // Consume newline
@@ -214,6 +222,15 @@ public class Main {
         }
         return null;
     }
+
+    private static void displayTitularPlayers(List<Player2> players) {
+        for (Player2 player : players) {
+            if (player.isTitular()) {
+                System.out.println(player.getShortInfo());
+            }
+        }
+    }
+
 
     private static Team getTeam(Team teamData) {
         Country country = teamData.getCountry();

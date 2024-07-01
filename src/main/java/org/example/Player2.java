@@ -30,6 +30,10 @@ public class Player2 {
         return name + ", Age: "+ calculateAge() + ", Position: " + position + ", Number: " + number + ", Is Titular: " + (isTitular ? "Yes" : "No");
     }
 
+    public String getShortInfo() {
+        return name + ", " + position + ", " + number;
+    }
+
     public int calculateAge() {
         return Period.between(birthDate, LocalDate.now()).getYears();
     }
