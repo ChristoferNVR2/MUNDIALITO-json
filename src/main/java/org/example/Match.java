@@ -26,13 +26,13 @@ public class Match {
         this.date = date;
     }
 
-    public void addGoal(int minute, Player2 player) {
-        Goal goal = new Goal(this, minute, player);
+    public void addGoal(int minute, Player2 player, Team team) {
+        Goal goal = new Goal(this, minute, player, team);
         goals.add(goal);
     }
 
-    public void addCard(int minute, Player2 player, String cardType) {
-        Card card = new Card(this, minute, player, cardType);
+    public void addCard(int minute, Player2 player, String cardType, Team team) {
+        Card card = new Card(this, minute, player, cardType, team);
         cards.add(card);
     }
 
@@ -64,9 +64,9 @@ public class Match {
         int team2Goals = 0;
 
         for (Goal goal : goals) {
-            if (goal.getPlayer().getTeam() == team1) {
+            if (goal.getTeam() == team1) {
                 team1Goals++;
-            } else if (goal.getPlayer().getTeam() == team2) {
+            } else if (goal.getTeam() == team2) {
                 team2Goals++;
             }
         }

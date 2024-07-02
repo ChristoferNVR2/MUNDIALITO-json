@@ -120,12 +120,28 @@ public class Main {
                         int goalMinute = scanner.nextInt();
                         scanner.nextLine();
 
-                        System.out.println("Titular Players - " + team1.getName() + ":");
-                        displayTitularPlayers(team1.getPlayers());
-                        System.out.println();
-                        System.out.println("Titular Players - " + team2.getName() + ":");
-                        displayTitularPlayers(team2.getPlayers());
-                        System.out.println();
+                        System.out.println("Enter Team number:");
+                        System.out.println(match.getTeam1().getName() + ": 1");
+                        System.out.println(match.getTeam2().getName() + ": 2");
+                        int goalTeamNumber = scanner.nextInt();
+                        scanner.nextLine();
+
+                        Team goalTeam;
+
+                        if (goalTeamNumber == 1) {
+                            System.out.println("Titular Players - " + team1.getName() + ":");
+                            displayTitularPlayers(team1.getPlayers());
+                            goalTeam = team1;
+                            System.out.println();
+                        } else if (goalTeamNumber == 2) {
+                            System.out.println("Titular Players - " + team2.getName() + ":");
+                            displayTitularPlayers(team2.getPlayers());
+                            System.out.println();
+                            goalTeam = team2;
+                        } else {
+                            System.out.println("Invalid team number. Try again.");
+                            break;
+                        }
 
                         System.out.println("Enter Player Name:");
                         String goalPlayerName = scanner.nextLine();
@@ -133,7 +149,7 @@ public class Main {
                         Player2 goalPlayer = findPlayerByName(team1, team2, goalPlayerName);
 
                         if (goalPlayer != null) {
-                            match.addGoal(goalMinute, goalPlayer);
+                            match.addGoal(goalMinute, goalPlayer, goalTeam);
                             System.out.println("Goal added.");
                         } else {
                             System.out.println("Player not found.");
@@ -144,12 +160,28 @@ public class Main {
                         int cardMinute = scanner.nextInt();
                         scanner.nextLine();
 
-                        System.out.println("Titular Players - " + team1.getName() + ":");
-                        displayTitularPlayers(team1.getPlayers());
-                        System.out.println();
-                        System.out.println("Titular Players - " + team2.getName() + ":");
-                        displayTitularPlayers(team2.getPlayers());
-                        System.out.println();
+                        System.out.println("Enter Team number:");
+                        System.out.println(match.getTeam1().getName() + ": 1");
+                        System.out.println(match.getTeam2().getName() + ": 2");
+                        int cardTeamNumber = scanner.nextInt();
+                        scanner.nextLine();
+
+                        Team cardTeam;
+
+                        if (cardTeamNumber == 1) {
+                            System.out.println("Titular Players - " + team1.getName() + ":");
+                            displayTitularPlayers(team1.getPlayers());
+                            cardTeam = team1;
+                            System.out.println();
+                        } else if (cardTeamNumber == 2) {
+                            System.out.println("Titular Players - " + team2.getName() + ":");
+                            displayTitularPlayers(team2.getPlayers());
+                            System.out.println();
+                            cardTeam = team2;
+                        } else {
+                            System.out.println("Invalid team number. Try again.");
+                            break;
+                        }
 
                         System.out.println("Enter Player Name:");
                         String cardPlayerName = scanner.nextLine();
@@ -159,7 +191,7 @@ public class Main {
                         if (cardPlayer != null) {
                             System.out.println("Enter Card Type (Yellow/Red):");
                             String cardType = scanner.nextLine();
-                            match.addCard(cardMinute, cardPlayer, cardType);
+                            match.addCard(cardMinute, cardPlayer, cardType, cardTeam);
                             System.out.println("Card added.");
                         } else {
                             System.out.println("Player not found.");

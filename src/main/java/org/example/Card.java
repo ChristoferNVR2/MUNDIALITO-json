@@ -3,8 +3,8 @@ package org.example;
 public class Card extends Event {
     private String cardType;  // 'yellow' or 'red'
 
-    public Card(Match match, int minute, Player2 player, String cardType) {
-        super(match, minute, player);
+    public Card(Match match, int minute, Player2 player, String cardType, Team team) {
+        super(match, minute, player, team);
         this.cardType = cardType;
     }
 

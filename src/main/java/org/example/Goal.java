@@ -2,8 +2,8 @@ package org.example;
 
 public class Goal extends Event {
 
-    public Goal(Match match, int minute, Player2 player) {
-        super(match, minute, player);
+    public Goal(Match match, int minute, Player2 player, Team team) {
+        super(match, minute, player, team);
     }
 
     @Override
