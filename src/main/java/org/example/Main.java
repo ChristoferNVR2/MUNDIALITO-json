@@ -95,11 +95,19 @@ public class Main {
 
             Match match = new Match(team1, team2, selectedLinesmen, stage, stadium, date);
 
-            System.out.println("Enter Attendance:");
-            System.out.println("Stadium Capacity: " + stadium.getCapacity());
-            int attendance = scanner.nextInt();
-            match.setAttendance(attendance);
-            System.out.println("Attendance set to " + match.getAttendance());
+            while (true) {
+                System.out.println("Enter Attendance:");
+                System.out.println("Stadium Capacity: " + stadium.getCapacity());
+                int attendance = scanner.nextInt();
+                if (attendance > stadium.getCapacity()) {
+                    System.out.println("Attendance cannot exceed stadium capacity. Try again.");
+                } else {
+                    match.setAttendance(attendance);
+                    System.out.println("Attendance set to " + match.getAttendance());
+                    break;
+                }
+            }
+
 
             boolean running = true;
             while (running) {
